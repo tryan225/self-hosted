@@ -1,0 +1,20 @@
+---
+version: "2.1"
+services:
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - VERSION=docker
+    volumes:
+      - /mnt/wdmycloud/Music:/music
+      - /mnt/wdmycloud/Videos/TV:/tv
+      - /mnt/wdmycloud/Videos/Movies:/movies
+      - /mnt/wdmycloud/Videos/Workout:/workout
+      - /mnt/wdmycloud/Podcasts:/podcasts
+      - /mnt/wdmycloud/Photos:/photos
+    restart: unless-stopped
