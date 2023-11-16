@@ -1,0 +1,20 @@
+---
+version: "2.1"
+services:
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /mnt/wdmycloud/Music:/music
+      - /mnt/wdmycloud/Videos/TV:/tv
+      - /mnt/wdmycloud/Videos/Movies:/movies
+      - /mnt/wdmycloud/Videos/Workout:/workout
+      - /mnt/wdmycloud/Podcasts:/podcasts
+      - /mnt/wdmycloud/Photos:/photos
+    ports:
+      - 8096:8096
+    restart: unless-stopped
