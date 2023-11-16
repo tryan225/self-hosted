@@ -9,12 +9,12 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /mnt/wdmycloud/Music:/music
-      - /mnt/wdmycloud/Videos/TV:/tv
-      - /mnt/wdmycloud/Videos/Movies:/movies
-      - /mnt/wdmycloud/Videos/Workout:/workout
-      - /mnt/wdmycloud/Podcasts:/podcasts
-      - /mnt/wdmycloud/Photos:/photos
+      - /mnt/wdmycloud/Music:/music:ro
+      - /mnt/wdmycloud/Videos/TV:/tv:ro
+      - /mnt/wdmycloud/Videos/Movies:/movies:ro
+      - /mnt/wdmycloud/Videos/Workout:/workout:ro
+      - /mnt/wdmycloud/Podcasts:/podcasts:ro
+      - /mnt/wdmycloud/Photos:/photos:ro
     ports:
       - 8096:8096
     restart: unless-stopped
