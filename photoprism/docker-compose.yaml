@@ -47,6 +47,6 @@ services:
     working_dir: "/photoprism" # do not change or remove
     ## Storage Folders: "~" is a shortcut for your home directory, "." for the current directory
     volumes:
-      - "/mnt/wdmycloud/Photos:/photoprism/originals"               # Original media files (DO NOT REMOVE)
+      - "/mnt/wdmycloud/Photos:/photoprism/originals:ro"               # Original media files (DO NOT REMOVE)
       - "./storage:/photoprism/storage"                  # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
 
