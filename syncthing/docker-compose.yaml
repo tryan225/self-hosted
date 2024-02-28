@@ -9,7 +9,7 @@ services:
       - PGID=1000
       - TZ=Etc/UTC
     volumes:
-      - /mnt/wdmycloud:/wdmycloud
+      - /media/ssd/syncthing/:/syncthing
     ports:
       - 8384:8384
       - 22000:22000/tcp
